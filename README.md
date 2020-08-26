@@ -27,8 +27,8 @@ Add a [Secret] named `GITHUB_PAT` to the repository with a [Github Personal Acce
 <details>
   <summary>Why? Click to expand</summary>
   
-  > Github Actions can open PRs, but those PRs will not trigger other Actions (`ci_build` or `publish`).
-  > Using a PAT allows the repo to check that the PR opened by [`bump`](#bump) is mergeable, and run the `publish` job on merge.
+  > Github Actions can open PRs, but those PRs will not trigger any required checks (e.g. `ci_build`).
+  > Using a PAT allows the repo to check that the PR opened by [`bump`](#bump) is mergeable.
 
 </details>
 
