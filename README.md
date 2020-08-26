@@ -13,6 +13,7 @@ Conventional Commits outlines commit message prefixes like `feat!`, `feat`, `fix
 
 These translate to semver bumps: `MAJOR`, `MINOR`, `PATCH`, and none.
 
+### A note on squash :eggplant:
 If you choose to use the [Squash merge strategy] when merging Pull Requests, make sure the merge commit title follows these guidelines.
 
 ### Setup
