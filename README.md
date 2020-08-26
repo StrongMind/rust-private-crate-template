@@ -1,4 +1,4 @@
-# Private Rust Crate Template
+# Private Rust Crate Template :lock: :crab:
 
 ## How to add as a dependency
 - Ensure your `cargo` installation is configured for [Git Authentication]
