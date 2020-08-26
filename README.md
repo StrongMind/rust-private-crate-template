@@ -13,8 +13,14 @@ Conventional Commits outlines commit message prefixes like `feat!`, `feat`, `fix
 
 These translate to semver bumps: `MAJOR`, `MINOR`, `PATCH`, and none.
 
+### Best practices
+- Check out the [Rust API Guidelines] for some easy rules of thumb that make your code easier to use
+- Check out [this section of the Rust cheat sheet] for some easy rules of thumb on what consitutes a "breaking change"
+
 ### A note on squash :eggplant:
-If you choose to use the [Squash merge strategy] when merging Pull Requests, make sure the merge commit title follows these guidelines.
+If you choose to use the [Squash merge strategy] when merging Pull Requests:
+- make sure the merge commit title follows [Conventional Commits]
+- include a detailed summary of the changes - this will go in the `CHANGELOG` and will help users know what's changed!
 
 ### Setup
 
@@ -28,7 +34,7 @@ Add a [Secret] named `GITHUB_PAT` to the repository with a [Github Personal Acce
 <details>
   <summary>Why? Click to expand</summary>
   
-  > Github Actions can open PRs, but those PRs will not trigger any required checks (e.g. `ci_build`).
+  > Github Actions can open PRs, but those PRs will not trigger any required checks (e.g. [`ci_build`](#ci_build)).
   > Using a PAT allows the repo to check that the PR opened by [`bump`](#bump) is mergeable.
 
 </details>
@@ -78,3 +84,5 @@ Add a [Secret] named `GITHUB_PAT` to the repository with a [Github Personal Acce
 [Conventional Commits]: https://www.conventionalcommits.org/en/v1.0.0/
 [Secret]: https://docs.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets
 [Github personal access token]: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+[Rust API Guidelines]: https://rust-lang.github.io/api-guidelines/
+[this section of the Rust cheat sheet]: https://cheats.rs/#api-stability
