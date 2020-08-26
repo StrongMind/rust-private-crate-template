@@ -1,5 +1,5 @@
 # Rust Private Crate Template :lock: :crab:
-Write less code that's loosely coupled - one crate at a time. :package:
+Write small, focused libraries - one crate at a time :package:
 
 ## How to add as a dependency
 - Ensure your `cargo` installation is configured for [Git Authentication]
