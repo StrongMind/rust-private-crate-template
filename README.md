@@ -19,7 +19,7 @@ If you choose to use the [Squash merge strategy] when merging Pull Requests, mak
 
 #### Adding your code
 1. Click "Use this template" to fork it to your new library, e.g. named `lib_name`.
-1. In your new library, run `cargo new --lib {{lib_name}}`
+1. In your new library, run `cargo new --lib lib_name`
 1. This will create a shell project that can be pushed to this repo
 
 #### CICD Setup
