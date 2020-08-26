@@ -33,19 +33,17 @@ jobs:
 
     # Cargo Check
     # - update version in Cargo.lock
-    # - run build / tests
+    # - make sure code's buildable
     - name: 'ensure Cargo.lock fresh'
       run: 'cargo c'
 
     # Push changes to main
-    - name: 'push'
-      env:
+    - env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: 'git push'
 
     # Push the new tag
     # - triggers 'publish' job
-    - name: 'push tags'
-      env:
+    - env:
         GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       run: 'git push --tags'
