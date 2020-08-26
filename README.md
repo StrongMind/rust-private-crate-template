@@ -20,8 +20,10 @@ If you choose to use the [Squash merge strategy] when merging Pull Requests, mak
 Add a [Secret] to the repository with a personal [Github Personal Access Token] tied to a repo administrator's account.
 <details>
   <summary>Why? Click to expand</summary>
-  Github Actions can open PRs, but those PRs will not trigger other Actions (`ci_build` or `publish`).
-  Using a PAT allows the repo to check that the PR is mergeable, and run the `publish` job on merge.
+  
+  > Github Actions can open PRs, but those PRs will not trigger other Actions (`ci_build` or `publish`).
+  > Using a PAT allows the repo to check that the PR is mergeable, and run the `publish` job on merge.
+
 </details>
 
 #### `ci_build`
