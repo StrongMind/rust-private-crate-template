@@ -2,10 +2,11 @@ name: 'publish_ver'
 
 on:
   push:
-    tags: ['*']
+    branches: ['main']
 
 jobs:
   publish_ver:
+    if: contains(github.event.head_commit.message, 'bump:')
     runs-on: 'ubuntu-latest'
     steps:
     # Setup
@@ -19,4 +20,6 @@ jobs:
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
     # Create new version branch
-    # Push code to it
+    - run: git switch -c ${{ github.ref }}
+    # Push HEAD to new version branch
+    - run: git push -u origin ${{ github.ref }}
