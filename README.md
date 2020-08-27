@@ -62,7 +62,7 @@ Add a [Secret] named `GITHUB_PAT` to the repository with a [Github Personal Acce
 1. As a housekeeping step, this creates a Github release based on the new tag
 
 #### `publish_ver`
-**When a tag is pushed to `main`** (e.g., by `bump`), this job will:
+**When a PR from `bump` is merged**, this job will:
 1. create a branch named the same as the tag (e.g. `v1.0.0`)
 1. push a snapshot of your `main` branch to the new version branch
 
