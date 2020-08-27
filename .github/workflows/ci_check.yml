@@ -1,4 +1,4 @@
-name: 'ci check'
+name: 'ci_check'
 
 on:
   push:

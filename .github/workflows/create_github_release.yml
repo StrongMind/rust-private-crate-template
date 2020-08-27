@@ -1,4 +1,4 @@
-name: 'gh_release'
+name: 'create_github_release'
 
 on:
   push:
@@ -6,10 +6,11 @@ on:
       - 'v*'
 
 jobs:
-  gh_release:
+  create_github_release:
     if: |
-         !contains(github.event.head_commit.message, 'bump')
-      && !contains(github.event.head_commit.message, 'ci')
+         !contains(github.event.head_commit.message, 'bump:')
+         && !contains(github.event.head_commit.message, 'ci:')
+         && !contains(github.event.head_commit.message, '[NO_PUB]')
     runs-on: 'ubuntu-latest'
     steps:
 
