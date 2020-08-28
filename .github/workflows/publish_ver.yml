@@ -23,3 +23,5 @@ jobs:
     - run: git switch -c ${{ github.ref }}
     # Push HEAD to new version branch
     - run: git push -u origin ${{ github.ref }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
