@@ -30,7 +30,7 @@ If you choose to use the [Squash merge strategy] when merging Pull Requests:
 1. This will create a shell project that can be pushed to this repo
 
 #### CICD Setup
-Add a [Secret] named `GITHUB_PAT` to the repository with a [Github Personal Access Token] tied to a repo administrator's account.
+Add a [Secret] named `CI_GITHUB_TOKEN` to the repository with a [Github Personal Access Token] tied to a repo administrator's account.
 <details>
   <summary>Why? Click to expand</summary>
   
