@@ -19,7 +19,7 @@ jobs:
 
     - uses: 'actions/checkout@v2'
       with:
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.GITHUB_PAT }}
 
     - run: |
         git config --global user.email "${{ github.actor }}@users.noreply.github.com"
@@ -39,11 +39,11 @@ jobs:
 
     # Push changes to main
     - env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
       run: 'git push'
 
     # Push the new tag
     # - triggers 'publish' job
     - env:
-        GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_PAT }}
       run: 'git push --tags'
